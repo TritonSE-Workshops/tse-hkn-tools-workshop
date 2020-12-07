@@ -32,5 +32,28 @@ def add_note(db: pymongo.database.Database, args: [str]):
 
 
 def delete_note(db: pymongo.database.Database, args: [str]):
-    # TODO: Your job is to implement this action
-    print("UNIMPLEMENTED")
+    '''
+    Given args = ['{ID}', ...], calling `delete_note` will delete
+    the note object with the specified _id equalling {ID}. If a note
+    with {ID} does not exist, then nothing will be deleted. The user
+    should be notified if the deletion operation was successful.
+
+    For example:
+
+    >>> add this is a note
+    Note XXXXXXX was successfully saved.
+
+    >>> view
+    ID				TIME				NOTE
+    --				----				----
+    5fcda19580501595e7e5379d	2020-12-07 03:29:25.462000	this is a note
+
+    >>> delete XXXXXXX
+    Note XXXXXXX was successfully deleted.
+
+    >>> view
+    ID				TIME				NOTE
+    --				----				----
+    '''
+    # TODO: Your job is to implement this function
+    pass

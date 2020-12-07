@@ -17,7 +17,7 @@ class CommandLine:
         print('-' * 60)
         while True:
             try:
-                line = input('>>> ')
+                line = input('\n>>> ')
             except EOFError:
                 print('\nbye')
                 return
