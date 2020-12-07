@@ -1,14 +1,22 @@
 version: '3.7'
 services:
-  database:
+  mongo:
+    container_name: "workshop_mongo"
     image: mongo:latest
     environment:
-      - MONGO_INITDB_DATABASE=workshop
-      - MONGO_INITDB_ROOT_USERNAME=root
-      - MONGO_INITDB_ROOT_PASSWORD=password
+      - "MONGO_INITDB_DATABASE=workshop"
+    volumes:
+      - mongo:/data/db
     ports:
       - 27017:27017
+  notes:
+    container_name: "workshop_notes"
+    build: .
+    depends_on: 
+      - "mongo"
+    environment:
+      - "MONGO_URI=mongodb://workshop_mongo:27017/workshop"
     volumes:
-      - data:/data/db
+      - ./:/app
 volumes:
-  data:
+  mongo:

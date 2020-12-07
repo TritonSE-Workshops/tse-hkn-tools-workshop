@@ -8,9 +8,6 @@ def view_notes(db: pymongo.database.Database, args: [str]):
         print("No arguments need to be provided.")
         return
     notes = db['notes']
-    if notes.count() == 0:
-        print("No notes are saved.")
-        return
     print("ID\t\t\t\tTIME\t\t\t\tNOTE")
     print("--\t\t\t\t----\t\t\t\t----")
     for note in notes.find().sort('created_at', pymongo.ASCENDING):
