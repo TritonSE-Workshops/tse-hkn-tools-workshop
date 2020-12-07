@@ -44,7 +44,11 @@ for running a containizered version of MongoDB.
 
 ## Jira
 
-TODO: Provide a link here
+The Jira project is located at https://tse-hkn-tools-workshop.atlassian.net/secure/BrowseProjects.jspa,
+
+Note that the Jira free plan does not allow anonymous users to browse the project,
+so if you want to take a peak at what this project looks like, you'll have to message
+either David or Pranav.
 
 ## Activity
 
